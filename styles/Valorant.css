@@ -311,3 +311,76 @@ body {
 .arma:hover .descripcion-arma {
     opacity: 1; /* Muestra la descripción al hacer hover en las tarjetas de arma */
 }
+
+/* Estilos para el contenedor principal */
+.map-container {
+    background-color: #000000;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex; /* Utiliza flexbox para centrar elementos internos */
+    flex-direction: column; /* Alinea los elementos en una columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+/* Estilos para los mapas */
+.map {
+    display: none;
+    padding: 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.map-inner {
+    position: relative;
+}
+
+.map-title {
+    font-size: 24px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+/* Estilos para la imagen del mapa */
+.map img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Estilos para la descripción del mapa */
+.map-description {
+    height: 8rem;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estilos para los botones de navegación */
+.map-buttons {
+    margin: 10px 0;
+}
+
+.map-container button {
+    background-color: #D32F2F;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.map-container button:hover {
+    background-color: #D32F2F;
+}
