@@ -499,3 +499,4 @@ document.getElementById('categoria-anterior').addEventListener('click', function
 
 // Llama a la función para mostrar las pistolas al cargar la página
 actualizarGaleriaArmas();
+
