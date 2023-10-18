@@ -67,3 +67,134 @@ body {
     color: #fd9099; /* Color rojo para las palabras coloreadas */
     font-weight: bold; /* hace que las palabras sean más visibles aplicando un peso de fuente en negrita */
 }
+
+/* Estilos para la carta de personaje */
+.carta-personaje {
+    display: flex; /* Utiliza un modelo de caja flexible */
+    flex-direction: column; /* Coloca los elementos internos en una columna */
+    background-color: #000000; /* Color de fondo negro para la carta */
+    margin: 30px; /* Agrega un margen alrededor de la carta */
+    padding: 20px; /* Agrega relleno interno a la carta */
+    border-radius: 10px; /* Agrega bordes redondeados a la carta */
+    text-align: center; /* Alinea el contenido centrado horizontalmente */
+    transition: opacity 1s ease-in-out; /* Transición de opacidad con duración y efecto de desvanecimiento */
+}   
+
+/* Estilos para el título "Personajes" como un título de sección */
+.titulo-seccion {
+    font-size: 28px; /* Tamaño de fuente para el título */
+    color: #fd9099; /* Color del interior del texto del título */
+    -webkit-text-stroke: 2px #672329; /* Contorno alrededor del texto del título (color y ancho) */
+    display: inline-block; /* Permite que el contorno se aplique correctamente */
+    padding: 5px; /* Espaciado interno para separar el contorno del texto del título */
+    font-family: 'bBigerOver', sans-serif; /* Fuente utilizada para el título */
+    margin-bottom: 0px; /* Sin margen inferior para ajustar el espacio entre el título y la carta */
+    margin-top: 0px; /* Sin margen superior */
+    animation: neon 1s ease-in-out infinite alternate; /* Animación para el efecto parpadeante del título */
+}
+
+/* Estilos para la imagen del personaje */
+.imagen-personaje img {
+    background-color: #000000; /* Color de fondo negro detrás de la imagen */
+    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+    width: 300px; /* Ancho de la imagen de 300 píxeles */
+    margin: 0 auto 5px; /* Centra la imagen horizontalmente y agrega espacio inferior */
+}
+
+/* Estilos para la información del personaje */
+.informacion-personaje {
+    text-align: center; /* Alinea el texto de información al centro horizontalmente */
+}
+
+.informacion-personaje h2 {
+    font-size: 32px; /* Tamaño de fuente para los encabezados de segundo nivel */
+    margin-top: 0px; /* Sin margen superior */
+    margin-bottom: 10px; /* Margen inferior de 10 píxeles para separar el encabezado del párrafo */
+    color: #ffffff; /* Color del texto del encabezado en blanco */
+}
+
+.informacion-personaje p {
+    height: 5rem; /* Altura fija de 5 rem (unidad relativa) para los párrafos */
+    font-size: 16px; /* Tamaño de fuente para los párrafos */
+    color: #666; /* Color del texto del párrafo en gris */
+}
+
+/* Estilos para la imagen del personaje */
+.imagen-personaje img {
+    background-color: #000000; /* Color de fondo negro detrás de la imagen */
+    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+    width: 300px; /* Ancho de la imagen de 300 píxeles */
+    margin: 0 auto 5px; /* Centra la imagen horizontalmente y agrega espacio inferior */
+}
+
+/* Estilos para la información del personaje */
+.informacion-personaje {
+    text-align: center; /* Alinea el texto de información al centro horizontalmente */
+}
+
+.informacion-personaje h2 {
+    font-size: 32px; /* Tamaño de fuente para los encabezados de segundo nivel */
+    margin-top: 0px; /* Sin margen superior */
+    margin-bottom: 10px; /* Margen inferior de 10 píxeles para separar el encabezado del párrafo */
+    color: #ffffff; /* Color del texto del encabezado en blanco */
+}
+
+.informacion-personaje p {
+    height: 5rem; /* Altura fija de 5 rem (unidad relativa) para los párrafos */
+    font-size: 16px; /* Tamaño de fuente para los párrafos */
+    color: #666; /* Color del texto del párrafo en gris */
+}
+
+/* Estilos para las habilidades */
+.habilidades {
+    display: flex; /* Utiliza un modelo de caja flexible para alinear las habilidades horizontalmente */
+    justify-content: space-between; /* Distribuye el espacio entre las habilidades */
+    margin: 5px; /* Agrega un pequeño margen alrededor del conjunto de habilidades */
+}
+
+.habilidad img {
+    width: 40px; /* Ancho fijo de las imágenes de habilidades */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre las imágenes de habilidades */
+}
+
+.detalle-habilidad {
+    display: none; /* Inicialmente oculta los detalles de la habilidad */
+    margin-top: 5px; /* Agrega margen superior para separar los detalles de las habilidades */
+}
+
+.detalle-habilidad p {
+    height: 6em; /* Altura fija para los párrafos de detalles de habilidades */
+    font-size: 16px; /* Tamaño de fuente para los detalles de habilidades */
+    color: #777; /* Color del texto de los detalles de habilidades en gris */
+}
+
+.detalle-habilidad img {
+    max-width: 100%; /* Limita el ancho de las imágenes de detalles de habilidades al 100% de su contenedor */
+}
+
+.habilidad-activa img {
+    filter: brightness(1.5); /* Ajusta el brillo de las imágenes para indicar que la habilidad está activa */
+}
+
+/* Estilos para los botones de "Anterior" y "Siguiente" */
+.navegacion-personajes {
+    display: flex; /* Utiliza un modelo de caja flexible para alinear los botones horizontalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los botones */
+    margin: 10px 30px; /* Agrega margen superior e inferior y margen izquierdo y derecho a los botones */
+}
+
+#anterior-personaje,
+#siguiente-personaje {
+    background-color: #FF4655; /* Color de fondo rojo para los botones */
+    color: white; /* Color del texto en los botones */
+    font-size: 24px; /* Tamaño de fuente para los botones */
+    border: none; /* Elimina los bordes de los botones */
+    border-radius: 5px; /* Agrega bordes redondeados a los botones */
+    padding: 10px 20px; /* Añade relleno interno a los botones */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre los botones */
+}
+
+#anterior-personaje:hover,
+#siguiente-personaje:hover {
+    background-color: #D32F2F; /* Cambia el color de fondo al hacer hover en los botones */
+}
