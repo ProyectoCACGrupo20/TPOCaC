@@ -500,3 +500,26 @@ document.getElementById('categoria-anterior').addEventListener('click', function
 // Llama a la función para mostrar las pistolas al cargar la página
 actualizarGaleriaArmas();
 
+let mapaActual = 0; // Índice del mapa actual
+
+const mapas = document.querySelectorAll('.map');
+const botonAnterior = document.getElementById('anterior-map');
+const botonSiguiente = document.getElementById('siguiente-map');
+
+function mostrarMapa(index) {
+    mapas.forEach(map => map.style.display = 'none');
+    mapas[index].style.display = 'block';
+}
+
+function mostrarMapaAnterior() {
+    mapaActual = (mapaActual - 1 + mapas.length) % mapas.length;
+    mostrarMapa(mapaActual);
+}
+
+function mostrarMapaSiguiente() {
+    mapaActual = (mapaActual + 1) % mapas.length;
+    mostrarMapa(mapaActual);
+}
+
+// Mostrar el primer mapa por defecto
+mostrarMapa(mapaActual);
