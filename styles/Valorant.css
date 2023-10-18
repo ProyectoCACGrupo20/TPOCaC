@@ -14,3 +14,33 @@ body {
     padding: 0;
     background: linear-gradient(to left, #0a0a0a, #232F40, #0a0a0a);
 }
+
+/* Main */
+.contenedor-main {  
+    padding-bottom: 10px;
+}
+
+/* PORTADA */
+.portada {
+    position: relative; /* Establece la posición del elemento como relativa */
+    text-align: center; /* Centra el contenido de texto en el elemento */
+    background-color: #232F40; /* Color de fondo del banner */
+}
+
+.portada img {
+    width: 100%; /* Establece el ancho de la imagen al 100% del ancho del contenedor */
+    opacity: 50%; /* Establece la opacidad de la imagen al 50%, lo que la hace semi-transparente */
+}
+
+.portada h1 {
+    font-size: 36px; /* Tamaño de fuente de 36 píxeles */
+    margin-top: 0px; /* Sin margen superior */
+    font-family: 'bBigerOver', sans-serif; /* Familia de fuentes personalizada con respaldo de fuentes genéricas sans-serif */
+    color: #fd9099; /* Color del interior del texto */
+    -webkit-text-stroke: 2px #672329; /* Contorno alrededor del texto */
+    position: absolute; /* Establece el texto como posición absoluta */
+    top: 50%; /* Lo coloca en la mitad superior del contenedor */
+    left: 50%; /* Lo coloca en el centro horizontal del contenedor */
+    transform: translate(-50%, -50%); /* Lo centra vertical y horizontalmente */
+    animation: neon 1s ease-in-out infinite alternate; /* Animación para el efecto parpadeante */
+}
