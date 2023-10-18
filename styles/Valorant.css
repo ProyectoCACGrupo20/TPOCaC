@@ -314,73 +314,73 @@ body {
 
 /* Estilos para el contenedor principal */
 .map-container {
-    background-color: #000000;
-    margin: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: flex; /* Utiliza flexbox para centrar elementos internos */
-    flex-direction: column; /* Alinea los elementos en una columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
+    background-color: #000000; /* Color de fondo negro para el contenedor principal */
+    margin: 30px; /* Margen alrededor del contenedor */
+    padding: 20px; /* Relleno interno del contenedor */
+    border-radius: 10px; /* Agrega bordes redondeados al contenedor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave al contenedor */
+    text-align: center; /* Alinea el contenido al centro horizontalmente */
+    display: flex; /* Utiliza flexbox para organizar elementos internos */
+    flex-direction: column; /* Alinea los elementos internos en una columna */
+    justify-content: center; /* Centra verticalmente los elementos internos */
+    align-items: center; /* Centra horizontalmente los elementos internos */
 }
+
 /* Estilos para los mapas */
 .map {
-    display: none;
-    padding: 10px;
-    background-color: #eeeeee;
-    border-radius: 10px;
-    max-width: 80%;
+    display: none; /* Inicialmente, los mapas están ocultos */
+    padding: 10px; /* Relleno interno de los mapas */
+    background-color: #eeeeee; /* Color de fondo de los mapas */
+    border-radius: 10px; /* Agrega bordes redondeados a los mapas */
+    max-width: 80%; /* Establece un ancho máximo para los mapas del 80% del contenedor principal */
 }
 
 .map-inner {
-    position: relative;
+    position: relative; /* Establece una posición relativa para el elemento interno */
 }
 
 .map-title {
-    font-size: 24px;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 5px;
-    border-radius: 5px;
-    margin: 0;
+    font-size: 24px; /* Tamaño de fuente para el título del mapa */
+    color: white; /* Color del texto del título */
+    background-color: rgb(0, 0, 0); /* Fondo del título */
+    padding: 5px; /* Relleno interno del título */
+    border-radius: 5px; /* Agrega bordes redondeados al título */
+    margin: 0; /* Sin margen alrededor del título */
 }
 
 /* Estilos para la imagen del mapa */
 .map img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100%; /* Asegura que la imagen se ajuste al ancho disponible */
+    max-height: 100%; /* Asegura que la imagen se ajuste al alto disponible */
 }
-
 
 /* Estilos para la descripción del mapa */
 .map-description {
-    height: 8rem;
-    font-size: 16px;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 5px;
-    border-radius: 5px;
+    height: 8rem; /* Altura fija para la descripción del mapa */
+    font-size: 16px; /* Tamaño de fuente para la descripción */
+    color: white; /* Color del texto de la descripción */
+    background-color: rgb(0, 0, 0); /* Fondo de la descripción */
+    padding: 5px; /* Relleno interno de la descripción */
+    border-radius: 5px; /* Agrega bordes redondeados a la descripción */
 }
 
 /* Estilos para los botones de navegación */
 .map-buttons {
-    margin: 10px 0;
+    margin: 10px 0; /* Margen superior e inferior para los botones de navegación */
 }
 
 .map-container button {
-    background-color: #D32F2F;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s;
+    background-color: #D32F2F; /* Color de fondo rojo para los botones */
+    color: white; /* Color del texto en los botones */
+    font-size: 18px; /* Tamaño de fuente para los botones */
+    border: none; /* Elimina los bordes de los botones */
+    border-radius: 5px; /* Agrega bordes redondeados a los botones */
+    padding: 10px 20px; /* Relleno interno de los botones */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre los botones */
+    margin: 10px; /* Margen alrededor de los botones */
+    transition: background-color 0.3s; /* Agrega una transición para el color de fondo de los botones al hacer hover */
 }
 
 .map-container button:hover {
-    background-color: #D32F2F;
+    background-color: #D32F2F; /* Cambia el color de fondo al hacer hover en los botones */
 }
