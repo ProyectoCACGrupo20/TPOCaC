@@ -523,3 +523,91 @@ function mostrarMapaSiguiente() {
 
 // Mostrar el primer mapa por defecto
 mostrarMapa(mapaActual);
+
+let clinetId = "0n3pnpn28t148yej9ez3ikabv7896u";
+let clinetSecret = "1avebadh5nkp5ms4y4f6389d9dw0ph";
+
+function getTwitchAuthorization() {
+    let url = `https://id.twitch.tv/oauth2/token?client_id=${clinetId}&client_secret=${clinetSecret}&grant_type=client_credentials`;
+
+    return fetch(url, {
+        method: "POST",
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        return data;
+    });
+}
+
+async function getGameId(gameName, accessToken) {
+    const url = `https://api.twitch.tv/helix/games?name=${gameName}`;
+    const headers = {
+        "Client-Id": clinetId,
+        "Authorization": `Bearer ${accessToken}`
+    };
+
+    const response = await fetch(url, {
+        headers,
+    });
+
+    const data = await response.json();
+    
+    if (data.data.length > 0) {
+        // Si se encontró el juego, devuelve el ID del primer resultado
+        return data.data[0].id;
+    } else {
+        // El juego no se encontró
+        return null;
+    }
+}
+
+async function getStreams(gameId, accessToken) {
+    const endpoint = `https://api.twitch.tv/helix/streams?game_id=${gameId}`;
+    const headers = {
+        "Client-Id": clinetId,
+        "Authorization": `Bearer ${accessToken}`
+    };
+
+    const response = await fetch(endpoint, {
+        headers,
+    });
+
+    return response.json();
+}
+
+function renderStreams(data) {
+    let { data: streams } = data;
+    let streamsContainer = document.querySelector("div.streams");
+
+    streamsContainer.innerHTML = ''; // Limpia el contenedor antes de agregar los nuevos streams
+    var contador = 0
+    streams.forEach((stream) => {
+        if (contador < 6) {
+            let { thumbnail_url: thumbnail, title, viewer_count } = stream;
+            let hdThumbnail = thumbnail
+            .replace("{width}", "1280")
+            .replace("{height}", "720");
+            streamsContainer.innerHTML += `
+            <div class="stream-container">
+                <img src="${hdThumbnail}" />
+                <h2>${title}</h2>
+                <p>${viewer_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} watching
+                </p>
+            </div>
+        `;
+        contador += 1
+        } else {
+            null
+        }
+    });
+}
+
+async function getTwitchData() {
+    const authData = await getTwitchAuthorization();
+    const gameId = await getGameId('Valorant', authData.access_token);
+    const streamsData = await getStreams(gameId, authData.access_token);
+
+    renderStreams(streamsData);
+}
+
+getTwitchData();
