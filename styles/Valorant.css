@@ -198,3 +198,116 @@ body {
 #siguiente-personaje:hover {
     background-color: #D32F2F; /* Cambia el color de fondo al hacer hover en los botones */
 }
+
+/* Estilos para la sección de "Armas" */
+.armas {
+    text-align: center; /* Alinea el contenido al centro horizontalmente */
+    background-color: #000000; /* Color de fondo negro */
+    padding: 20px; /* Agrega relleno interno a la sección de armas */
+    border-radius: 10px; /* Agrega bordes redondeados a la sección */
+    margin: 30px; /* Agrega margen alrededor de la sección */
+}
+
+/* Estilos para los botones de categoría */
+.categorias button {
+    background-color: #D32F2F; /* Color de fondo rojo para los botones de categoría */
+    color: white; /* Color del texto en los botones de categoría */
+    font-size: 18px; /* Tamaño de fuente para los botones de categoría */
+    border: none; /* Elimina los bordes de los botones de categoría */
+    border-radius: 5px; /* Agrega bordes redondeados a los botones de categoría */
+    padding: 5px 10px; /* Añade relleno interno a los botones de categoría */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre los botones de categoría */
+    margin: 5px; /* Agrega margen alrededor de los botones de categoría */
+}
+
+/* Estilos para la clase "categorias" */
+.categorias {
+    display: flex; /* Utiliza un modelo de caja flexible para alinear elementos horizontalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos de categoría */
+    align-items: center; /* Alinea verticalmente los elementos de categoría al centro */
+}
+
+/* Estilos para el botón "Anterior" */
+#categoria-anterior {
+    order: 1; /* Controla el orden de aparición del botón "Anterior" */
+    margin-right: auto; /* Empuja el botón "Anterior" a la izquierda */
+}
+
+/* Estilos para el botón "Siguiente" */
+#categoria-siguiente {
+    order: 3; /* Controla el orden de aparición del botón "Siguiente" */
+    margin-left: auto; /* Empuja el botón "Siguiente" a la derecha */
+}
+
+/* Estilos para el título de la categoría actual */
+#categoria-actual {
+    order: 2; /* Controla el orden de aparición del título de la categoría actual */
+    font-size: 24px; /* Tamaño de fuente para el título de la categoría actual */
+    font-weight: bold; /* Texto en negrita */
+    color: #ffffff; /* Color del texto en blanco */
+}
+
+/* Estilos para la galería de armas */
+.galeria-armas {
+    display: grid; /* Utiliza un sistema de cuadrícula para organizar las armas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Define el diseño de la cuadrícula */
+    gap: 20px; /* Aumenta el espacio entre las cartas de armas */
+    margin-top: 20px; /* Agrega margen superior para separar la galería de armas del título */
+    justify-items: center; /* Alinea horizontalmente los elementos de la cuadrícula al centro */
+}
+
+/* Estilos para cada elemento de arma */
+.arma {
+    background-color: #fff; /* Color de fondo de las tarjetas de arma */
+    border-radius: 5px; /* Agrega bordes redondeados a las tarjetas de arma */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a las tarjetas de arma */
+    transition: transform 0.2s; /* Agrega una transición para el efecto de transformación al hacer hover */
+    text-align: center; /* Alinea el contenido de las tarjetas de arma al centro */
+    cursor: pointer; /* Cambia el cursor a una mano al hacer hover */
+    position: relative; /* Permite posicionar elementos hijos relativamente */
+    overflow: hidden; /* Oculta el contenido que desborda de las tarjetas de arma */
+    aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto 1:1 (cuadrada) para las tarjetas de arma */
+    max-width: 300px; /* Ancho máximo predeterminado para las tarjetas de arma */
+}
+
+/* Estilos para el contenido dentro de cada tarjeta de arma */
+.arma .contenido {
+    padding: 10px; /* Espaciado interno para el contenido de las tarjetas de arma */
+    display: flex; /* Utiliza un modelo de caja flexible para organizar el contenido */
+    flex-direction: column; /* Coloca el contenido en una columna */
+    justify-content: center; /* Alinea verticalmente el contenido al centro */
+    align-items: center; /* Alinea horizontalmente el contenido al centro */
+    height: 100%; /* Asegura que la tarjeta ocupe todo el espacio disponible */
+}
+
+/* Estilos para la imagen dentro de cada tarjeta de arma */
+.arma img {
+    max-height: 100%; /* Asegura que la imagen se ajuste al alto disponible */
+    max-width: 100%; /* Asegura que la imagen se ajuste al ancho disponible */
+    height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+}
+
+/* Estilos adicionales para tarjetas con imágenes más anchas que altas */
+.arma.imagen-ancha {
+    max-width: 400px; /* Ancho máximo para tarjetas con imágenes más anchas */
+}
+
+/* Estilos para la descripción del arma */
+.arma .descripcion-arma {
+    top: 0;
+    left: 0;
+    padding-top: 30%;
+    position: absolute; /* Posición absoluta en relación con el elemento padre */
+    width: 100%; /* Ocupa todo el ancho del elemento padre */
+    height: 100%; /* Ocupa todo el alto del elemento padre */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    color: white; /* Color del texto en blanco */
+    font-size: 18px; /* Tamaño de fuente para la descripción del arma */
+    opacity: 0; /* Inicialmente, la descripción estará oculta */
+    transition: opacity 0.3s; /* Agrega una transición para la opacidad */
+}
+
+/* Estilos para mostrar la descripción al hacer hover */
+.arma:hover .descripcion-arma {
+    opacity: 1; /* Muestra la descripción al hacer hover en las tarjetas de arma */
+}
