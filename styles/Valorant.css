@@ -44,3 +44,26 @@ body {
     transform: translate(-50%, -50%); /* Lo centra vertical y horizontalmente */
     animation: neon 1s ease-in-out infinite alternate; /* Animación para el efecto parpadeante */
 }
+
+/* Historia */
+.historia {
+    background-color: #000000; /* Cambia el color de fondo a un tono más gris */
+    text-align: center; /* Centra el contenido de texto en el contenedor */
+    padding: 0px 0; /* Relleno cero en todas las direcciones */
+    border-radius: 10px; /* Agrega bordes redondeados al contenedor */
+    margin: 30px; /* Añade un margen alrededor del contenedor */
+}
+
+.historia p {
+    font-family: 'Arimo', sans-serif; /* Define la fuente utilizada para los párrafos de historia */
+    text-align: left; /* Alinea el texto a la izquierda dentro de los párrafos */
+    font-size: 16px; /* Tamaño de fuente para el texto de la historia */
+    margin-top: 0px; /* Sin margen superior para separar el título del párrafo */
+    padding: 10px; /* Añade relleno alrededor de los párrafos */
+    color: #727272; /* Color del interior del texto */
+}
+
+.coloreado {
+    color: #fd9099; /* Color rojo para las palabras coloreadas */
+    font-weight: bold; /* hace que las palabras sean más visibles aplicando un peso de fuente en negrita */
+}
