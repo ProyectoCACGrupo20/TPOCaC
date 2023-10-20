@@ -1,6 +1,6 @@
 @font-face {
     font-family: "scopion";
-    src: url(/src/General/Fonts/Scorpion-Regular/Scorpion.ttf);
+    src: url(src/General/Fonts/Scorpion-Regular/Scorpion.ttf);
 }
 html { scroll-behavior: smooth;}
 *{
