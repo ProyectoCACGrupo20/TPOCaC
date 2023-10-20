@@ -3,9 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counter-Strike 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/styles/CStrike.css">
 </head>
+
 <body>
-    
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#left.html">
+                <img src="gg.gif" width="65px" height="50px">
+            </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="/pages/CStrike.html">CS - GO</a></li>
+                    <li><a href="/pages/Valorant.html">VALORANT</a></li>
+                    <li><a href="#>LEFT 4 DEAD 2">LEFT 4 DEAD 2</a></li>
+                    <li><a href="#CONTACTANOS">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+                
+
+    <main>
+    <!-- Front e info-->
+        <div class="front">
+            <img src="/src/CStrike/cs2.png" alt="front_cs2">
+                <div class="front_text">
+                    <h1>COUNTER STRIKE 2</h1>
+                </div>
+<br><br>
+                <div class="info">
+                    <h2>INFORMACIÓN</h2>
+                    <p>Counter-Strike: Global Offensive (CS: GO) es un videojuego desarrollado por Valve Corporation en 
+                        cooperación con Hidden Path Entertainment, y es el cuarto juego de la saga Counter-Strike, sin 
+                        contar Neo u Online.<br>El juego implica dos equipos, los Terroristas (T) y los Antiterroristas 
+                        (CT), en varios modos de juego. El modo más común involucra a los Terroristas plantando y 
+                        defendiendo una bomba, mientras los Antiterroristas protegen las zonas de plantación y 
+                        desactivación de la bomba. Hay 9 modos de juego oficiales con características únicas. Además, el 
+                        juego tiene un sistema de emparejamiento que permite a los jugadores mostrar su habilidad en 
+                        servidores oficiales y comunitarios.</p>
+                </div>
+<br><br>
+                <!-- Personajes -->
+                <div class="info">
+                    <h2>PERSONAJES</h2>
+                    <div class="players">
+                        <div class="player">
+                            <img src="/src/CStrike/players/ct.png" alt="ct">
+                            <h3>Antiterroristas</h3>
+                        </div>
+                        <div class="player">
+                            <img src="/src/CStrike/players/tt.png" alt="tt">
+                            <h3>Terroristas</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Armas -->
+                <div class="center">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="/src/CStrike/guns/pistolas.png" alt="pistolas">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/src/CStrike/guns/heavys.png" alt="heavys">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/src/CStrike/guns/heavys.png" alt="heavys">
+                        </div>
+                        <button id="prevBtn"><<</button>
+                        <button id="nextBtn">>></button>
+                    </div>
+                </div>
+
+            <!-- Mapas -->
+                <div class="info">
+                <h2>MAPAS</h2>
+                </div>
+                <div class="maps">
+                    <img src="/src/CStrike/maps/dust2.webp""/img/csgo/maps/dust2.webp" alt="dust2">
+                    <img src="/src/CStrike/maps/inferno.webp" alt="inferno">
+                    <img src="/src/CStrike/maps/mirage.webp" alt="mirage">
+                    <img src="/src/CStrike/maps/nuke.webp" alt="nuke">
+                    <img src="/src/CStrike/maps/overpass.webp" alt="overpass">
+                </div>
+<br><br>
+                
+                <!-- Contenedor para la sección de Twitch -->
+                <div class="info">
+                    <div class="twitch-section">
+                        <!-- Encabezado con el título -->
+                        <h2 class="twitch-titulo">STREAMS DE CS2</h2>
+                    <!-- Contenedor para los streams de Twitch -->
+                        <div class="streams"></div>
+                    </div>
+                </div>
+        </div>
+
+<!-- Integrantes 
+        <h2>INTEGRANTES:</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="/img/csgo/members/null.jpg" alt="Imagen 1">
+                <h2>null</h2>
+                <p>Contenido de la tarjeta 1.</p>
+            </div>
+
+            <div class="card">
+                <img src="/img/csgo/members/nanu.jpg" alt="Imagen 2">
+                <h2>V_1-nanu</h2>
+                <p>Contenido de la tarjeta 2.</p>
+            </div>
+
+            <div class="card">
+                <img src="/img/csgo/members/anakin.jpg" alt="Imagen 3">
+                <h2>anakin skywalker</h2>
+                <p>Contenido de la tarjeta 3.</p>
+            </div>
+
+            <div class="card">
+                <img src="/img/csgo/members/unk.jpg" alt="Imagen 4">
+                <h2>Vacante</h2>
+                <p>Contenido de la tarjeta 4.</p>
+            </div>
+
+            <div class="card">
+                <img src="/img/csgo/members/unk.jpg" alt="Imagen 5">
+                <h2>Vacante</h2>
+                <p>Contenido de la tarjeta 5.</p>
+            </div>
+        </div>
+-->
+    </main>
+
+<!--    <footer>
+        <div class="left-section">
+            <a href="#"><img src="/ico/joystick.svg" alt="Icono Inicio"> INICIO</a>
+            <a href="#"><img src="/ico/valorant.svg" alt="Icono Valorant"> VALORANT</a>
+            <a href="#"><img src="/ico/counter-strike.svg" alt="Icono CSGO"> CSGO</a>
+            <a href="#"><img src="/ico/left4dead2.png" alt="Icono L4D2"> LEFO</a>
+        </div>
+        <div class="center-section">
+            <img src="/img/gg_final.png" alt="Logo GG Games">
+            <p>GGgames 2020-2024</p>
+            <p>Este sitio es propiedad y está operado por GG games LTD. Contacto: Admin@games.gg</p>
+            <p>Política de privacidad | Términos del servicio | Condiciones de servicio de YouTube | Política de privacidad de Google</p>
+        </div>
+        <div class="right-section">
+            <a href="#"><img src="/ico/youtube.svg" alt="Icono YouTube">YOUTUBE&nbsp;</a>
+            <a href="#"><img src="/ico/instagram.svg" alt="Icono Instagram">INSTAGRAM&nbsp;</a>
+            <a href="#"><img src="/ico/discord.svg" alt="Icono Discord">DISCORD&nbsp;</a>
+            <a href="#"><img src="/ico/steam.svg" alt="Icono Steam">STEAM&nbsp;</a>
+        </div>
+    </footer>
+-->
+    <script src="/scripts/CStrike.js"></script>
 </body>
 </html>
