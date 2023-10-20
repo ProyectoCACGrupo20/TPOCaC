@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "scopion";
+    font-family: 'Scopion';
     src: url(../src/General/Fonts/Scorpion-Regular/Scorpion.ttf);
 }
 html { scroll-behavior: smooth;}
@@ -14,6 +14,7 @@ body {
 
   h2 {
     margin-bottom: .5em;
+    font-family: 'Scorpion';
   }
   span{
     color: #7900ff;
