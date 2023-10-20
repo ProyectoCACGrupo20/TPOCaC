@@ -1,15 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GG Gaming</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+    </style>
 </head>
 <body>
-    <li>
-        <ul><a href="/pages/Valorant.html">Valorant</a></ul>
-        <ul><a href="/pages/CStrike.html">Cs-Go</a></ul>
-        <ul><a href="/pages/Left4Dead.html">Cs-Go</a></ul>
-    </li>
+
+
+                                                                                                            <!--Nav-->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#left.html">
+                <img src="src/Iconos/logogg.png" width="65px" height="50px">
+            </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="/pages/CStrike.html">CS - GO</a></li>
+                    <li><a href="/pages/Valorant.html">VALORANT</a></li>
+                    <li><a href="/pages/Left4Dead.html">LEFT 4 DEAD 2</a></li>
+                    <li><a href="#formulario">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+
+                                                                                                            <!--Tarjetas-->
+    <div class="tarjetas">
+        <div class="contenedor-grid">
+          
+            <article id="3685" class="tarjetas-art">
+            <a class="tarjetas-titulo" id="cs2" href="/pages/CStrike.html">
+                COUNTER STRIKE 2           </a>
+            <div class="tarjetas-imagenes">
+              <a href="/pages/CStrike.html">
+                  <img width="300" height="169" src="src/csgo.png" alt="CS2">    </a>
+            </div>
+          </article>
+      
+          <article id="3688" class="tarjetas-art">
+            <a class="tarjetas-titulo" id="valo" href="/pages/Valorant.html">
+                VALORANT           </a>
+            <div class="tarjetas-imagenes">
+              <a href="/pages/Valorant.html">
+                  <img width="300" height="169" src="src/valorant.png" alt="VALORANT">  </a>
+            </div>
+          </article>
+
+          <article id="3691" class="tarjetas-art">
+      
+            <a class="tarjetas-titulo" id="lefo" href="/pages/Left4Dead.html">
+                LEFT 4 DEAD 2            </a>
+      
+            <div class="tarjetas-imagenes">
+              <a href="/pages/Left4Dead.html">
+                  <img width="300" height="169" src="src/lefo.png" alt="LEFT 4 DEAD 2">  </a>
+      
+            </div>
+      
+          </article> 
+      </div>
+
+
+                                                                                                            <!--Quienes Somos-->
+    <div class="texto">
+        <h1 id="qstexto">Quienes somos</h1>
+        <p id="texto"> <span>GG Gaming</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. 
+        <br> <br>
+            Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.
+        <br> <br>
+            Suspendisse tristique et ex non faucibus. Pellentesque a urna risus. Ut non enim finibus, tempus dui eget, tincidunt sem. Phasellus sed mauris elit.
+        <br> <br>
+            Pellentesque a urna risus. Ut non enim finibus, tempus dui eget, tincidunt sem. Phasellus sed mauris elit. Pellentesque condimentum lorem vitae justo congue, ut semper nisi gravida.
+        <br> <br>
+            Sed condimentum diam orci, eget condimentum ipsum convallis quis. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium </p>
+    </div>
+
+
+                                                                                                            <!--Formulario nuevo-->
+<form action="" id="formulario" class="formulario">
+    <h1 class="formulario__titulo">Contacto</h1>
+
+    <input type="text" id="nombre">
+    <label for="" class="formulario__label">Nombre</label>
+
+    <input type="text" id="email">
+    <label for="" class="formulario__label">E-mail</label>
+
+    <input type="text" id="telefono">
+    <label for="" class="formulario__label">Teléfono (opcional)</label>
+
+    <input type="text" id="mensaje">
+    <label for="" class="formulario__label">Mensaje</label>
+
+    <input type="submit" class="formulario__submit">
+</form>
+
+
+                                                                                                            <!--Footer-->
+<footer>
+    <ul class="left-section">
+        <li><i class="fa-solid fa-gamepad" style="color: #ffffff;" width="24px" height="24px"></i><a href="#">INICIO</a></li>
+        <li><img src="src/Iconos/icoval.png" alt="Icono Valorant"><a href="#">VALORANT</a></li>
+        <li><img src="src/Iconos/icocs.png" alt="Icono CSGO"><a href="#">CS2</a></li>
+        <li><img src="src/Iconos/icolefo.png" alt="Icono L4D2"><a href="#">LEFT 4 DEAD 2</a></li>
+    </ul>
+    <div class="center-section">
+        <img src="src/Iconos/logogg.png" alt="Logo GG Gaming">
+        <p>GGgaming 2020-2024</p>
+        <p>Este sitio es propiedad y está operado por GG gaming LTD. Contacto: Admin@gaming.gg</p>
+        <p>Política de privacidad | Términos del servicio | Condiciones de servicio de YouTube | Política de privacidad de Google</p>
+    </div>
+    <ul class="right-section">
+        <li><a href="https://www.youtube.com/" target="_blank">YOUTUBE</a><i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;" width="24px" height="24px" ></i></li>
+        <li><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a><i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;" width="24px" height="24px"></i></li>
+        <li><a href="https://discord.com/" target="_blank">DISCORD</a><i class="fa-brands fa-discord fa-lg" style="color: #ffffff;" width="24px" height="24px"></i></li>
+        <li><a href="https://store.steampowered.com/?l=spanish" target="_blank">STEAM</a><i class="fa-brands fa-steam fa-lg" style="color: #ffffff;" width="24px" height="24px"></i></li>
+        </ul>
+</footer>
+                <script src="/scripts/index.js"></script>
 </body>
 </html>
