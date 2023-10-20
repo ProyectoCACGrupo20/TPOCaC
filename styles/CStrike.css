@@ -1,0 +1,463 @@
+@font-face {
+    font-family: 'Scorpion-Regular';
+    src: url('/src/General/Fonts/Scorpion-Regular/Scorpion.ttf') format('truetype'); 
+}
+@font-face {
+    font-family: 'Arimo';
+    src: url('/src/General/Fonts/Arimo/Arimo-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Scorpion'; /* Nombre de la fuente */
+    src: url('/src/General/Fonts/Scorpion-Regular/Scorpion.ttf') format('truetype'); /* Ruta a la fuente */
+    background: #0000001c;
+    border-radius: 10px 10px 10px 10px;
+    color: #ffb158;
+    animation: neon 1.5s infinite alternate;
+}
+
+h2 {
+    font-family: 'Scorpion'; /* Nombre de la fuente */
+    src: url('/src/General/Fonts/Scorpion-Regular/Scorpion.ttf') format('truetype'); /* Ruta a la fuente */
+    background: #0000001c;
+    color: #ffb158;
+    animation: neon 1.5s infinite alternate;
+}
+
+p{
+    font-family: 'Arimo';
+    src: url(/src/General/Fonts/Arimo/Arimo-VariableFont_wght.ttf);
+    font-size: 0.7em;
+    font-style: italic;
+    color: #fca23c;
+    text-align: left;
+    margin: 30px;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #fca23c;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 3px #ff8000e1, 0 0 10px #ff8800, 0 0 10px #ff8800
+    }
+    100% {
+        text-shadow: 0 0 10px #ff850be1, 0 0 30px #ff850be1, 0 0 40px #ff850be1
+    }
+}
+
+/* ------------------ nav ---------------- */
+
+.contenedor-header{
+    
+    background:#000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 8vh;
+}
+
+.logo img {
+    margin-left: 0%;
+    margin-bottom: 0px;
+    margin-top: 1vh;;
+    justify-content: left;
+}
+.contenedor-header header{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .contenedor-header header .logo a {
+        font-family: "NES";
+        color: #a862f6;
+        text-decoration: none;
+    }
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+    .contenedor-header header nav ul li a {
+        color: #9f5ee9;
+        margin: 0 15px;
+        padding: 3px;
+        transition: .5s;
+        text-decoration: none;
+        font-size: 3vh;
+        font-weight: lighter;
+    }
+    .contenedor-header header nav ul li a:hover {
+        color: #d0adf8;
+    }
+    .nav {
+        height: 80px;
+        width: 100%;
+        src: url('/src/General/Fonts/Scorpion-Regular/Scorpion.ttf') format('truetype'); /* Ruta a la fuente */
+
+    }
+.nav-responsive {
+    background-color: #7512e6;
+    color: #a862f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+} 
+    nav {
+        text-shadow: 0 0 5px #a862f6,
+        0 0 2px #7512e6, 
+        0 0 2px #7512e6,
+        0 0 2px #7512e6;
+    }
+    nav lu:hover {
+        text-shadow: 0 0 5px #d0adf8,
+        0 0 2px #d0adf8, 
+        0 0 2px #d0adf8,
+        0 0 2px #d0adf8;
+    }
+    /*           Responsive               */
+@media screen and (max-width:980px){
+    .contenedor-header header nav ul li a {
+        text-decoration: none;
+        font-size: 2vh;
+        font-weight: lighter;
+    }
+ul{
+    right:-100%;
+}
+    nav{
+        display: none;
+
+
+    }
+    .nav-responsive{
+        display: block;
+        transition: 0.3s;
+
+    }
+    nav.responsive{
+        display: block;
+        height: fit-content;
+        position: absolute;
+        right: 0;
+        top: 45px;
+        background-color: black;
+        width: 180px;
+
+        text-align: center;
+        z-index: -1;
+    }
+    nav.responsive ul{
+        display: block
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, #0a0a0a, #232F40, #0a0a0a);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------ front ---------------- */
+.front {
+    width: 100%; 
+    height: 74vh;
+    max-width: 100%; 
+    
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+}
+
+/* ------------------ front text ---------------- */
+.front_text {
+    position: absolute; /* Posición absoluta con respecto al contenedor de la imagen */
+    top: 40%; /* Lo coloca en el centro verticalmente */
+    left: 50%; /* Lo coloca en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el título completamente */
+    color: #ffb158; /* Color del texto */
+    padding: 9.5%; /* Espacio interior del título */
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.info {
+    background-color: #000;
+    width: 92.5%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding: 1.5%; /* Espacio interior del contenedor */
+    text-align: center; /* Centrar el contenido dentro del contenedor */
+    font-size: 2em;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/* ------------------ personajes ---------------- */
+.players{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.players .player {
+    text-align: center;
+    margin: 5px;
+    flex-basis: 30%; 
+    max-width: 300px; 
+}
+
+.players img{
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+
+/* ------------------ armas ---------------- */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 70vw; /* Ajusta el ancho del carrusel según tus necesidades */
+    height: 80vh;
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    transition: transform 0.8s;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(40%);
+    z-index: 1;
+    cursor: pointer;
+    background: #ff8800;
+    color: #fff;
+    border-color: rgb(0, 26, 255);
+    border-radius: 30%;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+/* ------------------ mapas ---------------- */
+
+.maps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95.5%;
+    height: 430px;
+    margin: auto;
+}
+
+.maps img{
+    max-width: 100%;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .4;
+    transition: .5s ease;
+}
+
+.maps img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* ------------------ API ---------------- */
+.twitch-section {
+    /* Estilos para el contenedor principal de la sección de Twitch. */
+    text-align: center; /* Centra el texto en el contenedor. */
+    background-color: #000000; /* Establece el color de fondo a negro. */
+}
+
+.twitch-titulo {
+    /* Estilos para el título "STREAMS DE VALORANT". */
+    font-size: 48px; /* Establece el tamaño de fuente en 48 píxeles. */
+    color: #ffb158; /* Establece el color del texto en un tono de naranja. */
+}
+
+.streams {
+    /* Estilos para el contenedor de los streams. */
+    width: 100%; /* Establece el ancho del contenedor al 100% del ancho disponible. */
+    display: grid; /* Utiliza una disposición de cuadrícula para los elementos secundarios. */
+    grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas de igual tamaño. */
+    column-gap: 1rem; /* Establece el espacio entre columnas en 1 rem. */
+    row-gap: 2rem; /* Establece el espacio entre filas en 2 rem. */
+}
+
+.stream-container {
+    /* Estilos para cada contenedor individual de los streams. */
+    width: 100%; /* Establece el ancho del contenedor al 100% del ancho disponible. */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor. */
+    position: relative; /* Permite posicionar elementos secundarios con respecto a este contenedor. */
+}
+
+.stream-container::before {
+    /* Estilos para un pseudo-elemento ::before dentro de .stream-container. */
+    content: "LIVE"; /* Agrega el texto "LIVE" al elemento antes del contenido principal. */
+    background-color: rgb(255, 0, 0); /* Establece el fondo en rojo. */
+    color: #ffffff; /* Establece el color del texto en blanco. */
+    display: block; /* Hace que el elemento sea un bloque. */
+    padding: 0.2rem 0.5rem; /* Agrega relleno alrededor del texto. */
+    border-radius: 1rem; /* Aplica bordes redondeados con un radio de 1 rem. */
+    font-size: 0.8rem; /* Establece el tamaño de fuente en 0.8 rem. */
+    position: absolute; /* Permite posicionar el elemento de manera absoluta en relación con su contenedor. */
+    top: 1rem; /* Establece una posición superior de 1 rem desde el borde superior del contenedor. */
+    left: 1rem; /* Establece una posición izquierda de 1 rem desde el borde izquierdo del contenedor. */
+    z-index: 1; /* Establece el orden de apilamiento (superposición) de capas. */
+    font-weight: 600; /* Establece el grosor del texto en 600 (negrita). */
+}
+
+.stream-container img {
+    /* Estilos para las imágenes dentro de .stream-container. */
+    width: 100%; /* Establece el ancho de la imagen al 100% del ancho disponible. */
+    border-radius: 15px; /* Aplica bordes redondeados a las imágenes con un radio de 15 píxeles. */
+}
+
+.stream-container h2 {
+    /* Estilos para los títulos dentro de .stream-container. */
+    font-size: 1rem; /* Establece el tamaño de fuente en 1 rem. */
+    animation: none;
+    color: #fca23c; /* Establece el color del texto en rojo. */
+    line-height: 1.5; /* Establece la altura de línea en 1.5 veces el tamaño de fuente. */
+    margin-top: 0; /* Elimina el margen superior del título. */
+    text-align: left; /* Alinea el texto a la izquierda. */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del elemento. */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para textos desbordados. */
+    -webkit-line-clamp: 2; /* Limita la visualización del texto a 2 líneas. */
+    -webkit-box-orient: vertical; /* Establece la orientación del texto a vertical. */
+    display: -webkit-box; /* Permite que el texto se comporte como una caja en línea. */
+    font-weight: 600; /* Establece el grosor del texto en 600 (negrita). */
+    min-height: 3rem; /* Establece la altura mínima del título en 3 rem. */
+    font-family: 'Arimo', sans-serif; /* Define la fuente del texto. */
+}
+
+.stream-container p {
+    /* Estilos para los párrafos dentro de .stream-container. */
+    margin-top: 0rem; /* Elimina el margen superior del párrafo. */
+    font-size: 0.9rem; /* Establece el tamaño de fuente en 0.9 rem. */
+    color: #cc00ff; /* Establece el color del texto en un tono de morado. */
+    display: flex; /* Utiliza el modelo de caja flexible para los párrafos. */
+    align-items: center; /* Centra verticalmente los elementos flexibles. */
+    font-weight: 600; /* Establece el grosor del texto en 600 (negrita). */
+}
+
+.stream-container p svg {
+    /* Estilos para los elementos <svg> dentro de los párrafos en .stream-container. */
+    margin-right: 1.5rem; /* Establece un margen derecho de 0.5 rem para los elementos SVG. */
+}
+
+
+/* ------------------ footer ---------------- */
+
+/* Estilos generales del footer */
+footer {
+    background-color: #000000; /* Fondo del footer */
+    color: #7900ff; /* Texto del footer */
+    display: flex; /* flexbox para organizar el contenido */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding-top: 40px; /* Espacio superior */
+    font-family: 'bBigerOver', sans-serif; /* Aplica la fuente personalizada */
+}
+
+/* Estilos para la sección izquierda del footer */
+.left-section {
+    display: flex; /* flexbox para organizar el contenido */
+    flex-direction: column; /* Cambia la dirección de la disposición a vertical */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.left-section a {
+    display: flex; /* flexbox para organizar el contenido */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 10px; /* Espacio entre los enlaces en vertical */
+    text-decoration: none; /* Elimina la decoración */
+    color: #7900ff; /* Color del texto */
+}
+
+.left-section img {
+    max-width: 30px; /* tamaño máximo  para los iconos */
+    margin-left: 30px; /* Espacio izquierdo entre los iconos y el texto */
+}
+
+/* Estilos para la sección central */
+.center-section {
+    font-family: 'Arimo', sans-serif; /* fuente personalizada */
+    text-align: center; /* Alinea el texto al centro */
+    color: #727272; /* Color del texto  */
+    font-size: 10px; /* Tamaño de fuente */
+}
+
+.center-section img {
+    max-width: 150px; /* Tamaño máximo del logo */
+}
+
+/* Estilos para la sección derecha */
+.right-section {
+    display: flex; /* flexbox para organizar el contenido */
+    flex-direction: column; /* Cambia la dirección de la disposición a vertical */
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    margin-right: 20px; /* Espacio con respecto al borde derecho */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.right-section a {
+    display: flex; /* flexbox para organizar el contenido */
+    align-items: center;  /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 10px; /* Espacio inferior entre los enlaces */
+    text-decoration: none; /* Elimina la decoración de enlaces */
+    color: #7900ff; /* Color del texto */
+    margin-right: 10px; /* Espacio derecho entre los elementos */
+}
+
+/* Estilos para los iconos en la derecha */
+.right-section img {
+    max-width: 30px; /* Establece un tamaño máximo para los iconos */
+    margin-right: 30px; /* Espacio derecho entre los iconos y el texto */
+    order: 2; /* Cambia el orden de los iconos para que aparezcan después del texto */
+}
+
+/* ------------------ CSGO ---------------- */

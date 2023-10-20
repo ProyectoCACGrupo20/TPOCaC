@@ -8,6 +8,116 @@
     src: url('/src/General/Fonts/Arimo/Arimo-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
+/* nav */
+
+.contenedor-header{
+    
+    background:#000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 8vh;
+}
+.logo img {
+    margin-left: 0%;
+    margin-bottom: 0px;
+    margin-top: 1vh;;
+    justify-content: left;
+}
+.contenedor-header header{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .contenedor-header header .logo a {
+        font-family: "NES";
+        color: #a862f6;
+        text-decoration: none;
+    }
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+    .contenedor-header header nav ul li a {
+        color: #9f5ee9;
+        margin: 0 15px;
+        padding: 3px;
+        transition: .5s;
+        text-decoration: none;
+        font-size: 3vh;
+        font-weight: lighter;
+    }
+    .contenedor-header header nav ul li a:hover {
+        color: #d0adf8;
+    }
+    .nav {
+        height: 80px;
+        width: 100%;
+    }
+.nav-responsive {
+    background-color: #7512e6;
+    color: #a862f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+} 
+    nav {
+        text-shadow: 0 0 5px #a862f6,
+        0 0 2px #7512e6, 
+        0 0 2px #7512e6,
+        0 0 2px #7512e6;
+    }
+    nav lu:hover {
+        text-shadow: 0 0 5px #d0adf8,
+        0 0 2px #d0adf8, 
+        0 0 2px #d0adf8,
+        0 0 2px #d0adf8;
+    }
+    /*           Responsive               */
+@media screen and (max-width:980px){
+    .contenedor-header header nav ul li a {
+        text-decoration: none;
+        font-size: 2vh;
+        font-weight: lighter;
+    }
+ul{
+    right:-100%;
+}
+    nav{
+        display: none;
+
+
+    }
+    .nav-responsive{
+        display: block;
+        transition: 0.3s;
+
+    }
+    nav.responsive{
+        display: block;
+        height: fit-content;
+        position: absolute;
+        right: 0;
+        top: 45px;
+        background-color: black;
+        width: 180px;
+
+        text-align: center;
+        z-index: -1;
+    }
+    nav.responsive ul{
+        display: block
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
 /* Body */
 body {
     margin: 0;

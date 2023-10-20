@@ -1,3 +1,15 @@
+/* ------------------- NAV ------------------ */
+let menuVisible = false;
+function mostrarOcultarMenu(){
+if(menuVisible){
+document.getElementById("nav").classList ="";
+menuVisible = false;
+}else{
+document.getElementById("nav").classList ="responsive";
+menuVisible = true;
+}
+}
+
 var personajes = [
     {
         nombre: "Astra",
@@ -583,24 +595,48 @@ function renderStreams(data) {
     var contador = 0
     streams.forEach((stream) => {
         if (contador < 6) {
-            let { thumbnail_url: thumbnail, title, viewer_count } = stream;
+            let { thumbnail_url: thumbnail, title, viewer_count, user_name } = stream;
             let hdThumbnail = thumbnail
-            .replace("{width}", "1280")
-            .replace("{height}", "720");
-            streamsContainer.innerHTML += `
-            <div class="stream-container">
-                <img src="${hdThumbnail}" />
-                <h2>${title}</h2>
-                <p>${viewer_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} watching
-                </p>
-            </div>
-        `;
-        contador += 1
-        } else {
-            null
+                .replace("{width}", "1280")
+                .replace("{height}", "720");
+
+            // Crea un hipervínculo para redirigir al canal del streamer
+            const streamLink = document.createElement('a');
+            streamLink.href = `https://www.twitch.tv/${user_name}`;
+            streamLink.target = '_blank'; // Abre el enlace en una nueva pestaña
+
+            // Crea el contenedor del stream
+            const streamContainer = document.createElement('div');
+            streamContainer.classList.add('stream-container');
+
+            // Crea la imagen del stream
+            const streamImage = document.createElement('img');
+            streamImage.src = hdThumbnail;
+
+            // Crea el título del stream
+            const streamTitle = document.createElement('h2');
+            streamTitle.textContent = title;
+
+            // Crea la descripción del número de espectadores
+            const viewerCount = document.createElement('p');
+            viewerCount.textContent = `${viewer_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} watching`;
+
+            // Agrega elementos al contenedor del stream
+            streamContainer.appendChild(streamImage);
+            streamContainer.appendChild(streamTitle);
+            streamContainer.appendChild(viewerCount);
+
+            // Agrega el contenedor del stream al hipervínculo
+            streamLink.appendChild(streamContainer);
+
+            // Agrega el hipervínculo al contenedor principal de streams
+            streamsContainer.appendChild(streamLink);
+
+            contador += 1;
         }
     });
 }
+
 
 async function getTwitchData() {
     const authData = await getTwitchAuthorization();

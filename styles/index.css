@@ -1,0 +1,147 @@
+/* Definición de la fuente personalizada para BEHATRICE (NAV y FOOTER) */
+@font-face {
+    font-family: 'bBigerOver'; /* Nombre de la fuente */
+    src: url('/fonts/b-biger-over/bBigerOver.ttf') format('truetype'); /* Ruta a la fuente */
+}
+/* Definición de la fuente personalizada para Arimo textos*/
+@font-face {
+    font-family: 'Arimo'; /* Nombre de la fuente */
+    src: url('/fonts/Arimo/Arimo-Italic-VariableFont_wght.ttf') format('truetype'); /* Ruta a la fuente */
+}
+
+/* Estilos generales del body */
+body {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------ CSGO ---------------- */
+.navbar {
+    background-color: #222831;
+    padding: 10px 0;
+    position: relative;
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 13px; /* posición del logo a la izquierda*/
+    top: 50%; /* posicion verticalmente del logo en el centro */
+    transform: translateY(-50%); /* posicion verticalmente el logo en el centro */
+    max-height: 30px; /*altura máxima del logo*/
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.navbar-item:first-child {
+    margin-right: 50px;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: #7900ff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar-item a:hover {
+    text-decoration: underline;
+}
+
+.navbar-divider {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent; /* Ancho del triángulo */
+    border-top: 40px solid transparent; /* Altura del triángulo */
+    border-bottom: 40px solid #7900ff; /* Color del triángulo y dirección invertida */
+}
+
+/* ------------------ nav ---------------- */
+
+/* Estilos generales del footer */
+footer {
+    background-color: #000000; /* Fondo del footer */
+    color: #7900ff; /* Texto del footer */
+    display: flex; /* flexbox para organizar el contenido */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding-top: 40px; /* Espacio superior */
+    font-family: 'bBigerOver', sans-serif; /* Aplica la fuente personalizada */
+}
+
+/* Estilos para la sección izquierda del footer */
+.left-section {
+    display: flex; /* flexbox para organizar el contenido */
+    flex-direction: column; /* Cambia la dirección de la disposición a vertical */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.left-section a {
+    display: flex; /* flexbox para organizar el contenido */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 10px; /* Espacio entre los enlaces en vertical */
+    text-decoration: none; /* Elimina la decoración */
+    color: #7900ff; /* Color del texto */
+}
+
+.left-section img {
+    max-width: 30px; /* tamaño máximo  para los iconos */
+    margin-left: 30px; /* Espacio izquierdo entre los iconos y el texto */
+}
+
+/* Estilos para la sección central */
+.center-section {
+    font-family: 'Arimo', sans-serif; /* fuente personalizada */
+    text-align: center; /* Alinea el texto al centro */
+    color: #727272; /* Color del texto  */
+    font-size: 10px; /* Tamaño de fuente */
+}
+
+.center-section img {
+    max-width: 150px; /* Tamaño máximo del logo */
+}
+
+/* Estilos para la sección derecha */
+.right-section {
+    display: flex; /* flexbox para organizar el contenido */
+    flex-direction: column; /* Cambia la dirección de la disposición a vertical */
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    margin-right: 20px; /* Espacio con respecto al borde derecho */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.right-section a {
+    display: flex; /* flexbox para organizar el contenido */
+    align-items: center;  /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 10px; /* Espacio inferior entre los enlaces */
+    text-decoration: none; /* Elimina la decoración de enlaces */
+    color: #7900ff; /* Color del texto */
+    margin-right: 10px; /* Espacio derecho entre los elementos */
+}
+
+/* Estilos para los iconos en la derecha */
+.right-section img {
+    max-width: 30px; /* Establece un tamaño máximo para los iconos */
+    margin-right: 30px; /* Espacio derecho entre los iconos y el texto */
+    order: 2; /* Cambia el orden de los iconos para que aparezcan después del texto */
+}
