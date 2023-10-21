@@ -302,6 +302,17 @@ position: relative;
     93.5% {margin-left: -1100%;}
     100% {margin-left: -1100%;}
 }
+.APIyt iframe{
+    margin: auto;
+    padding: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+.APIyt h2{
+    text-align: center;
+}
 
 /*API*/
 h4{
