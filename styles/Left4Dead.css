@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "scopion";
+    font-family: "scorpion";
     src: url(../TP/fonts/Scorpion-Regular/Scorpion.ttf);
 }
 *{
@@ -97,7 +97,7 @@ html { scroll-behavior: smooth;}
 /*landing*/
 .left4deadtxt{
     letter-spacing: 2px;
-    font-family: "scopion";
+    font-family: "scorpion";
     font-size: 1.5vw;
     color: #cdde71;
     text-shadow: 0 0 5px #cdde71 ,
@@ -148,7 +148,7 @@ span{
 }
 #titulo{
     padding-top: 30px;
-    font-family: "scopion";
+    font-family: "scorpion";
     letter-spacing: 2px;
     font-size: 1.8vw;
     color: #cdde71;
@@ -160,7 +160,7 @@ span{
     
 }
 #subtitulo{
-    font-family: "scopion";
+    font-family: "scorpion";
     letter-spacing: 2px;
     font-size: 1.5vw;
     color: #cdde71;
@@ -513,6 +513,13 @@ footer {
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
+    .right-section {
+        font-size: 1.4vh;
+        font-weight: lighter;
+    }
+  .left-section {
+        font-size: 1.4vh;
+    }
 }
 @media (max-width: 768px) {
     .contenedor {
@@ -524,3 +531,68 @@ footer {
       grid-row: auto; /* Elimina la propiedad grid-row de las imágenes */
     }
   }
+  @media (max-width: 575px){
+    .right-section {
+        font-size: 1.6vh;
+        font-weight: lighter;
+    }
+    .center-section img {
+        width: 220px;
+    }
+    
+    .center-section p{
+        font-size: 0.2vh;
+    }
+    
+    .left-section {
+        font-size: 1.6vh;
+    }
+    .left-section li{
+        padding: 5px;
+    }
+    ul{
+    right:-100%;
+    }
+    #terminos{
+        font-size: 0px;
+    }
+    .twitch-section{
+        margin: 60px 10px 10px;
+    }  
+    .streams{
+        display: block;
+    }
+}
+
+
+  @media (max-width: 894px){
+
+    .right-section {
+        font-size: 1.6vh;
+        font-weight: lighter;
+    }
+    .center-section img {
+        width: 220px;
+    }
+    
+    .center-section p{
+        font-size: 0.2vh;
+    }
+    
+    .left-section {
+        font-size: 1.6vh;
+    }
+    .left-section li{
+        padding: 5px;
+    }
+    ul{
+    right:-100%;
+    }
+    #terminos{
+        font-size: 0px;
+    }
+    .streams{
+        display: block;
+    }
+  }
+
