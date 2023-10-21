@@ -1,6 +1,6 @@
 @font-face {
     font-family: "scorpion";
-    src: url(../TP/fonts/Scorpion-Regular/Scorpion.ttf);
+    src: url(../src/General/Fonts/Scorpion-Regular/Scorpion.ttf);
 }
 *{
     margin: 0%;
