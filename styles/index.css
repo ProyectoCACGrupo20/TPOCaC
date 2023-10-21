@@ -545,3 +545,30 @@ right:-100%;
     .formulario__submit:focus{
         box-shadow: 0 0 20px 1px rgba(121, 0, 255, 0.5);
     }
+@media (max-width: 894px){
+    
+.right-section {
+    font-size: 1.6vh;
+    font-weight: lighter;
+}
+.center-section img {
+    width: 220px;
+}
+
+.center-section p{
+    font-size: 0.2vh;
+}
+
+.left-section {
+    font-size: 1.6vh;
+}
+.left-section li{
+    padding: 5px;
+}
+ul{
+right:-100%;
+}
+#terminos{
+    font-size: 0px;
+}
+}
