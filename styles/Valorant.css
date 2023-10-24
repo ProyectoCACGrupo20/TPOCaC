@@ -818,4 +818,7 @@ footer {
         column-gap: 1rem;
         row-gap: 1rem;
     }
+    .map-description {
+        max-width: 90rem;
+    }
   }
