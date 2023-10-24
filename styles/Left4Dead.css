@@ -16,7 +16,7 @@ header {
     font-weight: bold;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 10;
     width: 100%;
 }
 
@@ -565,34 +565,6 @@ footer {
 
 
 @media screen and (max-width:980px){
-    nav{
-        display: none;
-    }
-    .nav-responsive{
-        display: block;
-    }
-    nav.responsive{
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 75px;
-        background-color: #252A2E;
-        width: 180px;
-    }
-    nav.responsive ul{
-        display: block !important;
-    }
-    nav.responsive ul li{
-        border-bottom: 1px solid #fff;
-        padding: 10px 0;
-    }
-    .right-section {
-        font-size: 1.4vh;
-        font-weight: lighter;
-    }
-  .left-section {
-        font-size: 1.4vh;
-    }
 }
 @media (max-width: 768px) {
     .contenedor {
@@ -657,9 +629,6 @@ footer {
     }
     .left-section li{
         padding: 5px;
-    }
-    ul{
-    right:-100%;
     }
     #terminos{
         font-size: 0px;
