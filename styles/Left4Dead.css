@@ -571,7 +571,6 @@ footer {
         align-content: center;
       grid-template-rows: repeat(2, 1fr); /* Dos filas para pantallas más pequeñas */
     }
-    
     .imagen {
       grid-row: auto; /* Elimina la propiedad grid-row de las imágenes */
     }
@@ -594,9 +593,6 @@ footer {
     }
     .left-section li{
         padding: 5px;
-    }
-    ul{
-    right:-100%;
     }
     #terminos{
         font-size: 0px;
