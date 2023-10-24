@@ -179,6 +179,7 @@ body {
     border-radius: 10px;
     }
     .imagen {
+        margin-top: 83px;
         position: relative;
         display: inline-block;
         text-align: center;
