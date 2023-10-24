@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+    });
+});
+
 // Variable "clinetId" con el token creado en la parte de developers Twitch
 let clinetId = "lxihbl5ugsykcpcxg8jojpwm0xjy9c";
 // Variable "clinetSecret" con el token creado en la parte de developers Twitch

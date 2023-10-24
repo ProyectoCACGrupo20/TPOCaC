@@ -1,30 +1,11 @@
-let menuVisible = false;
-//FunciÃ³n que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
-}
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
-var inputs = document.getElementsByTagName('input');
-for (var i = 0; i < inputs.length; i++){
-    inputs[i].addEventListener('keyup', function(){
-        if(this.value.length>=1){
-            this.nextElementSibling.classList.add('fijar');
-        } 
-        else{
-            this.nextElementSibling.classList.remove('fijar');
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
     });
-}
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.querySelector(".formulario");

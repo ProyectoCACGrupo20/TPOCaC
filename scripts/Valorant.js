@@ -1,14 +1,11 @@
-/* ------------------- NAV ------------------ */
-let menuVisible = false;
-function mostrarOcultarMenu(){
-if(menuVisible){
-document.getElementById("nav").classList ="";
-menuVisible = false;
-}else{
-document.getElementById("nav").classList ="responsive";
-menuVisible = true;
-}
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+    });
+});
 
 var personajes = [
     {

@@ -8,10 +8,11 @@ html { scroll-behavior: smooth;}
     padding: 0;
     font-family: 'Scorpion';
 }
+
 body {
     background: #f2f2f2;
     background-image: radial-gradient(#232F40,#000000 );
-    font-family: 'Scorpion':
+    font-family: 'Scorpion';
   }
 
   h2 {
@@ -22,91 +23,153 @@ body {
     color: #7900ff;
   }
   
-
-                                                                                                            /*nav*/
-.contenedor-header{
-    background:#000000;
+  header {
+    font-family: "Scorpion-Regular";
+    font-size: 20px;
+    font-weight: bold;
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
-    z-index: 99;
-    height: 8vh;
+    z-index: 10;
+    width: 100%;
+}
 
-}
-.logo img {
-    transition: 1s;
-} 
-.logo img:hover {
-    transform: scale(1.1);
-    transition: 1s;
-} 
-.center-section img {
-    transition: 1s;
-}
-.center-section img:hover {
-    transform: scale(1.1);
-    transition: 1s;
-} 
-.logo img {
-    margin-left: 0%;
-    margin-bottom: 0px;
-    margin-top: 1vh;;
-    justify-content: left;
-}
-.contenedor-header header{
-    margin: auto;
+/* Estilo para el navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient(to left, #3f0088, #000000);
+    padding: 10px 20px;
 }
-    .contenedor-header header .logo a {
-        font-family: "scorpion";
-        font-size: 36px;
-        color: #a862f6;
-        text-decoration: none;
-    }
-.contenedor-header header ul{
-    font-family: "scorpion";
-    display: flex;
-    list-style: none;
+
+/* Estilo para el logo */
+.navbar-left img {
+    height: 60px;
 }
-    .contenedor-header header nav ul li a {
-        color: #9f5ee9;
-        margin: 0 15px;
-        padding: 3px;
-        transition: .5s;
-        text-decoration: none;
-        font-size: 2.2vh;
-        font-weight: lighter;
-    }
-    .contenedor-header header nav ul li a:hover {
-        color: #d0adf8;
-    }
-    .nav {
-        height: 80px;
-        width: 100%;
-    }
-.nav-responsive {
-    background-color: #7512e6;
-    color: #a862f6;
-    padding: 5px 10px;
-    border-radius: 5px;
+
+/* Estilo para los enlaces a la derecha con texto contorneado */
+.navbar-right a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #7512e6; /* Contorno alrededor del texto (color y ancho) */
+    color: #d0adf8; /* Color del interior del texto */
+    transition: color 0.3s; /* Transición suave de color al pasar el mouse */
+}
+
+/* Cambiar el color y el contorno al pasar el mouse por encima de "INICIO" */
+.navbar-right a:nth-child(1):hover {
+    -webkit-text-stroke: 0.2px #130031; /* Contorno alrededor del texto (color y ancho) */
+    color: #842cff; /* Color del interior del texto */
+}
+
+/* Cambiar el color y el contorno al pasar el mouse por encima de "CS Go" */
+.navbar-right a:nth-child(2):hover {
+    -webkit-text-stroke: 0.2px #916100; /* Contorno alrededor del texto (color y ancho) */
+    color: #ffd500; /* Color del interior del texto */
+}
+
+/* Cambiar el color y el contorno al pasar el mouse por encima de "Valorant" */
+.navbar-right a:nth-child(3):hover {
+    -webkit-text-stroke: 0.2px #7e1720; /* Contorno alrededor del texto (color y ancho) */
+    color: #e10013; /* Color del interior del texto */
+}
+
+/* Cambiar el color y el contorno al pasar el mouse por encima de "Left" */
+.navbar-right a:nth-child(4):hover {
+    -webkit-text-stroke: 0.2px #004600; /* Contorno alrededor del texto (color y ancho) */
+    color: #00a00d; /* Color del interior del texto */
+}
+
+/* Cambiar el color y el contorno al pasar el mouse por encima de "Contacto" */
+.navbar-right a:nth-child(5):hover {
+    -webkit-text-stroke: 0.2px #130031; /* Contorno alrededor del texto (color y ancho) */
+    color: #842cff; /* Color del interior del texto */
+}
+
+/* Estilo para el botón hamburguesa */
+.mobile-menu-button {
+    display: none; /* Ocultar el botón en pantallas grandes */
     cursor: pointer;
-    display: none;
-} 
-    nav {
-        text-shadow: 0 0 5px #a862f6,
-        0 0 2px #7512e6, 
-        0 0 2px #7512e6,
-        0 0 2px #7512e6;
+    padding: 10px;
+    background: #000000; /* Cambia el color según tus preferencias */
+    color: #fff;
+}
+
+.mobile-menu-button .bar {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+}
+
+/* Estilo para el menú desplegable */
+.mobile-menu {
+    display: none; /* Ocultar el menú en pantallas grandes */
+    background: linear-gradient(#000000, #7512e6, #000000);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    z-index: 1; /* Asegura que el menú esté en una capa por encima del contenido */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobile-menu a:nth-child(1){
+    -webkit-text-stroke: 0.7px #130031; /* Contorno alrededor del texto (color y ancho) */
+    color: #842cff; /* Color del interior del texto */
+}
+
+.mobile-menu a:nth-child(2){
+    -webkit-text-stroke: 0.7px #ffae00; /* Contorno alrededor del texto (color y ancho) */
+    color: #f2ff00; /* Color del interior del texto */
+}
+
+.mobile-menu a:nth-child(3){
+    -webkit-text-stroke: 0.7px #960000; /* Contorno alrededor del texto (color y ancho) */
+    color: #ff2a2a; /* Color del interior del texto */
+}
+
+.mobile-menu a:nth-child(4){
+    -webkit-text-stroke: 0.2px #0f7e00; /* Contorno alrededor del texto (color y ancho) */
+    color: #34be02; /* Color del interior del texto */
+}
+
+.mobile-menu a:nth-child(5){
+    -webkit-text-stroke: 0.2px #400085; /* Contorno alrededor del texto (color y ancho) */
+    color: #8b1fff; /* Color del interior del texto */
+}
+
+/* Estilo para mostrar u ocultar el menú desplegable */
+@media screen and (max-width: 992px) {
+    .navbar-right {
+        display: none;
     }
-    nav lu:hover {
-        text-shadow: 0 0 5px #d0adf8,
-        0 0 2px #d0adf8, 
-        0 0 2px #d0adf8,
-        0 0 2px #d0adf8;
+
+    .mobile-menu-button {
+        display: block;
     }
+
+    .mobile-menu.active {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .content.menu-opened {
+        margin-top: 200px;
+    }
+}
+
+                                                                                                            /*nav*/
+
 
 
                                                                                                             /*TARJETAS*/
@@ -134,7 +197,8 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(2.6vw, 26vw));
         grid-gap: 8vw;
         padding-left: 2vw;
-        margin-top: 100px
+        margin-top: 100px;
+        z-index: -1;
       }
     .tarjetas-art {
         position: relative;
@@ -157,10 +221,10 @@ body {
         font-size: 2.5em;
         font-weight: bold;
         text-decoration: none;
-        z-index: 1;
         position: absolute;
         height: 100%;
         width: 100%;
+        z-index: 2;
         top: 0;
         left: 0;
         opacity: 0;
@@ -416,37 +480,6 @@ footer {
                                                                                                             /*RESPONSIVE*/
     
     @media screen and (max-width:1200px){
-        .contenedor-header header nav ul li a {
-            text-decoration: none;
-            font-size: 2vh;
-            font-weight: lighter;
-        }
-
-        nav{
-            display: none;
-        }
-        .nav-responsive{
-            display: block;
-    
-        }
-        nav.responsive{
-            display: block;
-            height: fit-content;
-            position: absolute;
-            right: 0;
-            top: 45px;
-            background-color: #252A2E;
-            width: 180px;
-            text-align: center;
-            z-index: -1;
-        }
-        nav.responsive ul{
-            display: block
-        }
-        nav.responsive ul li{
-            border-bottom: 1px solid #fff;
-            padding: 10px 0;
-        }
         
     }
     .tarjetas-titulo{
