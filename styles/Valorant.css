@@ -648,6 +648,10 @@ footer {
     text-align: center;
 }
 
+.center-section {
+    font-family: "Arimo";
+}
+
 .center-section img {
     width: 100px;
     height: 100px;

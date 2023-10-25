@@ -485,98 +485,6 @@ button {
     margin-right: 0.5rem; /* Establece un margen derecho de 0.5 rem para los elementos SVG. */
 }
 
-/*FOOTER*/
-
-footer li{
-    list-style: none;
-    padding-top: 10px;
-    padding-left: 8px;
-    padding-bottom: 8px;
-    padding-right: 15px;
-}
-footer i{
-    padding: none;
-    max-width: 24px;
-    max-height: 24px;
-}
-footer {
-    width: auto;
-    height: auto;
-    padding-bottom: 6px;
-    background-color: #000000;
-    color: #7900ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
-    font-family: "Scorpion-Regular";
-}
-.left-section {
-    padding-left: 15px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 20px;
-}
-
-.left-section a {
-    align-items: center;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #7900ff;
-}
-
-.left-section img {
-    max-width: 24px;
-    padding-right: 6px;
-    
-}
-
-.center-section {
-    font-family: 'Arimo', sans-serif;
-    text-align: center;
-    color: #727272;
-    font-size: 10px;
-}
-.center-section p{
-    font-family: 'Arimo', sans-serif;
-    text-align: center;
-    color: #727272;
-    font-size: 10px;
-}
-
-.center-section img {
-    max-width: 150px;
-    width: 50%;
-}
-
-.right-section {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 20px;
-}
-
-.right-section a {
-    align-items: center;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #7900ff;
-    margin-right: 10px;
-}
-
-#discord{
-    filter: brightness(100%);
-}
-
-.right-section img {
-    max-width: 30px;
-    margin-right: 30px;
-    order: 2;
-}
-
 @media screen and (max-width: 768px) {
     .streams {
         grid-template-columns: repeat(2, 1fr);
@@ -584,4 +492,69 @@ footer {
 }
 
 /* ------------------ footer ---------------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(#000000, #674b23);
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+}
+  
+.left-section ul,
+.right-section ul {
+    list-style: none;
+    padding: 0;
+}
+.left-section a, .right-section a{
+    text-decoration: none;
+    font-family: "Scorpion-Regular";
+}
+
+.left-section ul li,
+.right-section ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.center-section{
+    text-align: center;
+}
+
+.center-section p{
+    color: white;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 1em;
+    text-align: center;
+}
+
+.center-section img {
+    width: 100px;
+    height: 100px;
+}
+
+.right-section ul {
+    text-align: right;
+}
+  
+.right-section ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.left-section img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.right-section img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px; 
+}
 /* ------------------ CSGO ---------------- */
