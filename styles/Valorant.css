@@ -181,7 +181,7 @@ body {
 .portada h1 {
     font-size: 36px; /* Tamaño de fuente de 36 píxeles */
     margin-top: 0px; /* Sin margen superior */
-    font-family: 'Scorpion-Regular', sans-serif; /* Familia de fuentes personalizada con respaldo de fuentes genéricas sans-serif */
+    font-family: '-Regular', sans-serif; /* Familia de fuentes personalizada con respaldo de fuentes genéricas sans-serif */
     color: #fd9099; /* Color del interior del texto */
     -webkit-text-stroke: 2px #672329; /* Contorno alrededor del texto */
     position: absolute; /* Establece el texto como posición absoluta */
@@ -233,7 +233,7 @@ body {
     -webkit-text-stroke: 2px #672329; /* Contorno alrededor del texto del título (color y ancho) */
     display: inline-block; /* Permite que el contorno se aplique correctamente */
     padding: 5px; /* Espaciado interno para separar el contorno del texto del título */
-    font-family: 'Scorpion-Regular', sans-serif; /* Fuente utilizada para el título */
+    font-family: '-Regular', sans-serif; /* Fuente utilizada para el título */
     margin-bottom: 0px; /* Sin margen inferior para ajustar el espacio entre el título y la carta */
     margin-top: 0px; /* Sin margen superior */
     animation: neon 1s ease-in-out infinite alternate; /* Animación para el efecto parpadeante del título */
@@ -547,7 +547,7 @@ body {
     -webkit-text-stroke: 2px #672329; /* Contorno alrededor del texto del título de Twitch (color y ancho) */
     display: inline-block; /* Para que el contorno se aplique correctamente */
     padding: 5px; /* Espaciado interno para separar el contorno del texto del título de Twitch */
-    font-family: 'Scorpion-Regular', sans-serif; /* Fuente personalizada para el título de Twitch */
+    font-family: '-Regular', sans-serif; /* Fuente personalizada para el título de Twitch */
     margin-bottom: 0px; /* Sin margen inferior para el título de Twitch */
     margin-top: 0px; /* Sin margen superior para el título de Twitch */
     animation: neon 1s ease-in-out infinite alternate; /* Animación para el efecto parpadeante del título de Twitch */
@@ -641,7 +641,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    font-family: "scorpion";
+    font-family: "Scorpion-Regular";
 }
 .left-section {
     padding-left: 15px;
