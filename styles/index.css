@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Scorpion';
+    font-family: 'Scorpion-Regular';
     src: url(../src/General/Fonts/Scorpion-Regular/Scorpion.ttf);
 }
 html { scroll-behavior: smooth;}
@@ -11,12 +11,12 @@ html { scroll-behavior: smooth;}
 body {
     background: #f2f2f2;
     background-image: radial-gradient(#232F40,#000000 );
-    font-family: 'Scorpion';
+    font-family: 'Scorpion-Regular';
 }
 
 h2 {
     margin-bottom: .5em;
-    font-family: 'Scorpion';
+    font-family: 'Scorpion-Regular';
 }
 span{
     color: #7900ff;
@@ -219,7 +219,7 @@ p {
     .tarjetas-titulo {
         border-radius: 4px;
         letter-spacing: 2px;
-        font-family: "scorpion";
+        font-family: "Scorpion-Regular";
         font-size: 2.5em;
         font-weight: bold;
         text-decoration: none;
@@ -274,7 +274,7 @@ p {
     font-size: 1.8vw;
     letter-spacing: 2px;
     padding-top: 30px;
-    font-family: "scorpion";
+    font-family: "Scorpion-Regular";
     text-align: center;
     justify-content: center;
     color: #9f5ee9;
@@ -316,7 +316,7 @@ p {
 .formulario__titulo{
     padding-bottom: 15px;
     font-size: 1.8vw;
-    font-family: "scorpion";
+    font-family: "Scorpion-Regular";
     text-align: center;
     margin-top: 0;
     letter-spacing: 2px;
@@ -362,7 +362,7 @@ input:focus + .formulario__label{
 }
 .formulario__submit{
     letter-spacing: 2px;
-    font-family: "scorpion";
+    font-family: "Scorpion-Regular";
     background:rgb(31, 30, 30) ;
     color: #a862f6;
     text-shadow: 0 0 5px #a862f6,
@@ -413,7 +413,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    font-family: "scorpion";
+    font-family: "Scorpion-Regular";
 }
 .left-section {
     padding-left: 15px;
