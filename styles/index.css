@@ -13,17 +13,17 @@ body {
     background: #f2f2f2;
     background-image: radial-gradient(#232F40,#000000 );
     font-family: 'Scorpion';
-  }
+}
 
-  h2 {
+h2 {
     margin-bottom: .5em;
     font-family: 'Scorpion';
-  }
-  span{
+}
+span{
     color: #7900ff;
-  }
-  
-  header {
+}
+
+header {
     font-family: "Scorpion-Regular";
     font-size: 20px;
     font-weight: bold;
@@ -167,12 +167,7 @@ body {
         margin-top: 200px;
     }
 }
-
-                                                                                                            /*nav*/
-
-
-
-                                                                                                            /*TARJETAS*/
+                                                                                                    /*TARJETAS*/
     .tarjetas img {
     width: 100%;
     height: auto;
@@ -197,25 +192,28 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(2.6vw, 26vw));
         grid-gap: 8vw;
-        padding-left: 2vw;
+        padding-left: 3%;
         margin-top: 100px;
         z-index: -1;
-      }
+    }
+
+    
+    
     .tarjetas-art {
         position: relative;
-      }
-      
-      .tarjetas-imagenes {
+    }
+    
+    .tarjetas-imagenes {
         overflow: hidden;
         
-      }
-      
-      .tarjetas-imagenes img {
+    }
+    
+    .tarjetas-imagenes img {
         filter: blur(0px);
         transition: filter 0.3s ease-in;
-      }
-      
-      .tarjetas-titulo {
+    }
+    
+    .tarjetas-titulo {
         border-radius: 4px;
         letter-spacing: 2px;
         font-family: "scorpion";
@@ -234,39 +232,57 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      
-      .tarjetas-art:hover .tarjetas-titulo {
+    }
+    
+    .tarjetas-art:hover .tarjetas-titulo {
         opacity: 1;
-      }
-      
-      .tarjetas-art:hover .tarjetas-imagenes img {
+    }
+    
+    .tarjetas-art:hover .tarjetas-imagenes img {
         filter: blur(2px);
-      }
-      #cs2{
+    }
+    #cs2{
         color: #ffd89d;
         text-shadow: 0 0 5px #ffd89d,
         0 0 2px #4b3818, 
         0 0 2px #4b3818,
         0 0 2px #4b3818;
-      }
-      #valo{
+    }
+    #valo{
         color: #fd9099;
         text-shadow: 0 0 5px #fd9099,
         0 0 2px #672329, 
         0 0 2px #672329,
         0 0 2px #672329;
-      }
+    }
 
-      #lefo{
+    #lefo{
         color: #cdde71 ;
         text-shadow: 0 0 5px #cdde71 ,
         0 0 2px #343c06, 
         0 0 2px #343c06,
         0 0 2px #4b3818;
-      }
-      
-      
+    }
+    
+    /*-------------------------------------- Vista movil/tablet de las cards --------------------------------------------------- */
+    @media screen and (max-width: 992px) {
+        .contenedor-grid {
+              grid-template-columns: 1fr; /* Esto hará que las tarjetas se muestren una debajo de la otra en pantallas más pequeñas */
+              grid-gap: 16px; /* Ajusta el espacio entre las tarjetas según tu preferencia */
+            }
+    
+            .tarjetas-art {
+                margin-left: 10%;
+                width: 78%; /* Establece el ancho deseado para cada tarjeta */
+                height: 51vh; /* Establece el alto deseado para cada tarjeta */
+            }
+    
+            .tarjetas-imagenes img {
+                width: 100%; /* Ajusta el ancho de la imagen para que se ajuste a la tarjeta */
+                height: 50.5vh; /* Ajusta la altura de la imagen para que se ajuste a la tarjeta */
+            }
+    }
+
                                                                                                             /*TEXTO*/
 #qstexto{
     font-size: 1.8vw;
@@ -520,7 +536,7 @@ ul{
     font-size: 2.8vw;
 }
 .texto{
-    width: 300px;
+    width: 95%;
     margin: auto;
 }
 #texto{
@@ -553,7 +569,7 @@ right:-100%;
     font-size: 0px;
 }
 .formulario{
-    width: 400px;
+    width: 85%;
 }
 .formulario__titulo {
   font-size: 2.8vw;  
