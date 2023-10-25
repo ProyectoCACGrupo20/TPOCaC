@@ -8,8 +8,7 @@
 }
 
 h1 {
-    font-family: 'Scorpion'; /* Nombre de la fuente */
-    src: url('/src/General/Fonts/Scorpion-Regular/Scorpion.ttf') format('truetype'); /* Ruta a la fuente */
+    font-family: 'Scorpion-Regular'; /* Nombre de la fuente */
     background: #0000001c;
     border-radius: 10px 10px 10px 10px;
     color: #ffb158;
@@ -17,16 +16,14 @@ h1 {
 }
 
 h2 {
-    font-family: 'Scorpion'; /* Nombre de la fuente */
-    src: url('/src/General/Fonts/Scorpion-Regular/Scorpion.ttf') format('truetype'); /* Ruta a la fuente */
-    background: #0000001c;
+    font-family: 'Scorpion-Regular'; /* Nombre de la fuente */
     color: #ffb158;
     animation: neon 1.5s infinite alternate;
+    padding-bottom: 5vh;
 }
 
 p{
     font-family: 'Arimo';
-    src: url(/src/General/Fonts/Arimo/Arimo-VariableFont_wght.ttf);
     font-size: 0.7em;
     font-style: italic;
     color: #fca23c;
@@ -35,6 +32,7 @@ p{
 }
 
 h3 {
+    font-family: 'Scorpion-Regular';
     margin-top: 10px;
     color: #fca23c;
 }
@@ -174,7 +172,7 @@ header {
 }
 
 /* Estilo para mostrar u ocultar el menú desplegable */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     .navbar-right {
         display: none;
     }
@@ -191,6 +189,8 @@ header {
     .content.menu-opened {
         margin-top: 200px;
     }
+
+
 }
 
 main {
@@ -208,17 +208,44 @@ body {
 }
 
 /* ------------------ front ---------------- */
-.front {
-    width: 100%; 
-    height: 74vh;
-    max-width: 100%; 
-    
+.portada {
+    position: relative; /* Establece la posición del elemento como relativa */
+    text-align: center; /* Centra el contenido de texto en el elemento */
+    background-color: #232F40; /* Color de fondo del banner */
 }
 
-.front img {
-    width: 100%;
-    height: 100%;
-    opacity: 50%;
+.portada img {
+    width: 100%; /* Establece el ancho de la imagen al 100% del ancho del contenedor */
+    height: 74.7vh;
+    opacity: 50%; /* Establece la opacidad de la imagen al 50%, lo que la hace semi-transparente */
+}
+
+.portada h2 {
+    font-size: 4.1em; /* Tamaño de fuente de 36 píxeles */
+    margin-top: 0px; /* Sin margen superior */
+    font-family: 'Scorpion-Regular'; /* Familia de fuentes personalizada con respaldo de fuentes genéricas sans-serif */
+    color: #ffb158; /* Color del interior del texto */
+    -webkit-text-stroke: 2px #ff9317; /* Contorno alrededor del texto */
+    position: absolute; /* Establece el texto como posición absoluta */
+    top: 50%; /* Lo coloca en la mitad superior del contenedor */
+    left: 50%; /* Lo coloca en el centro horizontal del contenedor */
+    transform: translate(-50%, -50%); /* Lo centra vertical y horizontalmente */
+    animation: neon 1s ease-in-out infinite alternate; /* Animación para el efecto parpadeante */
+}
+
+@media screen and (max-width: 768px) {
+    .portada{
+        height: 150px;
+    }
+
+    .portada img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portada h2 {
+        font-size: 35px;
+    }
 }
 
 /* ------------------ front text ---------------- */
@@ -237,12 +264,19 @@ body {
     background-color: #000;
     width: 92.5%; /* Ancho del contenedor */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    padding: 1.5%; /* Espacio interior del contenedor */
+    padding: 1px 1px 1px 1px; /* Espacio interior del contenedor */
     text-align: center; /* Centrar el contenido dentro del contenedor */
     font-size: 2em;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .info {
+        width: 90%; /* Ajusta el ancho para dispositivos móviles */
+        padding: 1%; /* Ajusta el espacio interior */
+        font-size: 1.5em; /* Ajusta el tamaño de fuente */
+    }
+}
 /* ------------------ personajes ---------------- */
 .players{
     display: flex;
@@ -264,6 +298,16 @@ body {
     max-height: 200px;
 }
 
+@media screen and (max-width: 768px) {
+    .players {
+        flex-direction: column; /* Cambiar la dirección de flex a columna */
+    }
+
+    .players .player {
+        flex-basis: 100%; /* Ocupar todo el ancho disponible */
+        max-width: none; /* Eliminar el máximo ancho */
+    }
+}
 
 /* ------------------ armas ---------------- */
 
@@ -320,14 +364,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95.5%;
-    height: 430px;
+    width: 92.5%;
+    max-height: 100%;
     margin: auto;
 }
 
 .maps img{
     max-width: 100%;
+    max-height: 100%;
     width: 0px;
+    height: 70vh;
     flex-grow: 1;
     object-fit: cover;
     opacity: .4;
@@ -341,11 +387,25 @@ button {
     filter: contrast(120%);
 }
 
+@media screen and (max-width: 768px) {
+    .maps {
+        max-width: 90%;
+        height: 70vh; /* Cambia la altura a automática para ajustar el contenido */
+    }
+
+    .maps img {
+        max-width: 50%; /* Ajusta el ancho de la imagen al 100% */
+        width: 0vw; /* Elimina el máximo ancho */
+        height: 100%; /* Ajusta la altura automáticamente */
+    }
+}
+
 /* ------------------ API ---------------- */
 .twitch-section {
     /* Estilos para el contenedor principal de la sección de Twitch. */
     text-align: center; /* Centra el texto en el contenedor. */
     background-color: #000000; /* Establece el color de fondo a negro. */
+    padding: 20px;
 }
 
 .twitch-titulo {
@@ -422,167 +482,14 @@ button {
 
 .stream-container p svg {
     /* Estilos para los elementos <svg> dentro de los párrafos en .stream-container. */
-    margin-right: 1.5rem; /* Establece un margen derecho de 0.5 rem para los elementos SVG. */
+    margin-right: 0.5rem; /* Establece un margen derecho de 0.5 rem para los elementos SVG. */
 }
 
+@media screen and (max-width: 768px) {
+    .streams {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /* ------------------ footer ---------------- */
-
-/* Estilos generales del footer */
-footer {
-    background-color: #000000; /* Fondo del footer */
-    color: #7900ff; /* Texto del footer */
-    display: flex; /* flexbox para organizar el contenido */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    padding-top: 40px; /* Espacio superior */
-    font-family: 'bBigerOver', sans-serif; /* Aplica la fuente personalizada */
-}
-
-/* Estilos para la sección izquierda del footer */
-.left-section {
-    display: flex; /* flexbox para organizar el contenido */
-    flex-direction: column; /* Cambia la dirección de la disposición a vertical */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-    font-size: 20px; /* Tamaño de fuente */
-}
-
-.left-section a {
-    display: flex; /* flexbox para organizar el contenido */
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    margin-bottom: 10px; /* Espacio entre los enlaces en vertical */
-    text-decoration: none; /* Elimina la decoración */
-    color: #7900ff; /* Color del texto */
-}
-
-.left-section img {
-    max-width: 30px; /* tamaño máximo  para los iconos */
-    margin-left: 30px; /* Espacio izquierdo entre los iconos y el texto */
-}
-
-/* Estilos para la sección central */
-.center-section {
-    font-family: 'Arimo', sans-serif; /* fuente personalizada */
-    text-align: center; /* Alinea el texto al centro */
-    color: #727272; /* Color del texto  */
-    font-size: 10px; /* Tamaño de fuente */
-}
-
-.center-section img {
-    max-width: 150px; /* Tamaño máximo del logo */
-}
-
-/* Estilos para la sección derecha */
-.right-section {
-    display: flex; /* flexbox para organizar el contenido */
-    flex-direction: column; /* Cambia la dirección de la disposición a vertical */
-    align-items: flex-end; /* Alinea los elementos a la derecha */
-    margin-right: 20px; /* Espacio con respecto al borde derecho */
-    font-size: 20px; /* Tamaño de fuente */
-}
-
-.right-section a {
-    display: flex; /* flexbox para organizar el contenido */
-    align-items: center;  /* Alinea verticalmente los elementos al centro */
-    margin-bottom: 10px; /* Espacio inferior entre los enlaces */
-    text-decoration: none; /* Elimina la decoración de enlaces */
-    color: #7900ff; /* Color del texto */
-    margin-right: 10px; /* Espacio derecho entre los elementos */
-}
-
-/* Estilos para los iconos en la derecha */
-.right-section img {
-    max-width: 30px; /* Establece un tamaño máximo para los iconos */
-    margin-right: 30px; /* Espacio derecho entre los iconos y el texto */
-    order: 2; /* Cambia el orden de los iconos para que aparezcan después del texto */
-}
-
-footer li{
-    list-style: none;
-    padding-top: 10px;
-    padding-left: 8px;
-    padding-bottom: 8px;
-    padding-right: 15px;
-}
-footer i{
-    padding: none;
-    max-width: 24px;
-    max-height: 24px;
-}
-footer {
-    width: auto;
-    height: auto;
-    padding-bottom: 6px;
-    background-color: #000000;
-    color: #7900ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
-    font-family: "scorpion";
-}
-.left-section {
-    padding-left: 15px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 20px;
-}
-
-.left-section a {
-    align-items: center;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #7900ff;
-}
-
-.left-section img {
-    max-width: 24px;
-    
-}
-
-.center-section {
-    font-family: 'Arimo', sans-serif;
-    text-align: center;
-    color: #727272;
-    font-size: 10px;
-}
-.center-section p{
-    font-family: 'Arimo', sans-serif;
-    text-align: center;
-    color: #727272;
-    font-size: 10px;
-}
-
-.center-section img {
-    max-width: 150px;
-    width: 50%;
-}
-
-.right-section {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 20px;
-}
-
-.right-section a {
-    align-items: center;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #7900ff;
-    margin-right: 10px;
-}
-
-#discord{
-    filter: brightness(100%);
-}
-
-.right-section img {
-    max-width: 30px;
-    margin-right: 30px;
-    order: 2;
-}
 /* ------------------ CSGO ---------------- */

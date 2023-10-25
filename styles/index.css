@@ -33,6 +33,10 @@ header {
     width: 100%;
 }
 
+p {
+    white-space: pre-line;
+}
+
 /* Estilo para el navbar */
 .navbar {
     display: flex;
