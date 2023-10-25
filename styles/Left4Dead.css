@@ -503,6 +503,12 @@ footer {
     margin-bottom: 10px;
 }
 
+.center-section p{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 1em;
+}
+
 .center-section {
     text-align: center;
 }
