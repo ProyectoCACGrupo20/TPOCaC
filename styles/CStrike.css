@@ -531,13 +531,14 @@ footer {
 
 .center-section{
     text-align: center;
+    font-family: "arimo";
 }
 
 .center-section p{
     color: white;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    font-size: 20%;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -577,8 +578,12 @@ footer {
         text-align: center;
     }
 
+    .center-section p{
+        font-size: 5%;
+    }
+    
     .left-section, .right-section, .center-section {
-        width: 100%;
+        width: 80%;
         text-align: center;
         padding: 0;
     }
@@ -597,6 +602,7 @@ footer {
 
     .left-section img, .right-section img {
         margin: 0;
+        padding: 0;
         width: 30px;
         height: 30px;
     }
