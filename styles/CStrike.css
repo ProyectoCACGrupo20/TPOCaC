@@ -543,8 +543,8 @@ footer {
 }
 
 .center-section img {
-    width: 20vw;
-    height: 25vh;
+    width: 100px;
+    height: 100px;
 }
 
 .right-section ul {
@@ -578,6 +578,11 @@ footer {
         text-align: center;
     }
 
+    .center-section img {
+        width: 20vw;
+        height: 25vh;
+    }
+    
     .center-section p{
         font-size: 5%;
     }
